@@ -1,3 +1,70 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,p1,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+p,h1,h2{
+    text-align: center;
+}
+p{
+	font-size:25px;
+    color:#67616b;
+	font-family: cambria;
+}
+
+p1{
+	font-size:25px;
+    color:#67616b;
+	font-family: cambria;
+}
+
+h1{
+    font-family: verdana;
+	text-transform: uppercase;
+	font-weight: bold;
+    font-size:20px;
+	Color: white;
+}
+h2{
+    font-family: sans-serif;
+	font-weight: bold;
+    font-size:20px;
+	Color: #33334d;
+}
+
+h3{
+	font-family: verdana;
+	font-weight: bold;
+    font-size: 30px;
+	Color: White;
+}
+
+h4{
+	font-size:25px;
+    color:#33334d;
+	font-family: cambria;
+}
+
 $gray: #eee;
 
 md-content.md-default-theme {
@@ -36,4 +103,14 @@ md-sidenav {
 }
 .user-avatar {
   border-radius: 99%;
+}
+
+.profile{
+    width: 90px;
+    height: 100px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-color: white;
 }

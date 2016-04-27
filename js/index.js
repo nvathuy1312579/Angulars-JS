@@ -5,34 +5,36 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     $mdSidenav(menuId).toggle();
   };
  	$scope.menu = [
-    {
+            {
       link : '',
-      title: 'Dashboard',
-      icon: 'dashboard'
+      title: 'Full Name: Nguyen Vu Anh Thuy',
+      icon: ''
     },
     {
       link : '',
-      title: 'Friends',
-      icon: 'group'
+      title: 'D.O.B: 23/09/1995',
+      icon: ''
     },
     {
       link : '',
-      title: 'Messages',
-      icon: 'message'
+      title: 'P.O.B: Kien Giang',
+      icon: ''
     }
+
   ];
-  $scope.admin = [
-    {
-      link : '',
-      title: 'Trash',
-      icon: 'delete'
-    },
-    {
-      link : 'showListBottomSheet($event)',
-      title: 'Settings',
-      icon: 'settings'
-    }
-  ];
+    $scope.contacts = [
+        {
+            link : 'anhthuy2908@gmal.com',
+            title: 'Email: anhthuy2908@gmail.com',
+            icon: ''
+        },
+        {
+            link : '',
+            title: 'Phone Number: 01692189779',
+            icon: ''
+        }
+    ];
+  
   $scope.activity = [
       {
         what: 'Brunch this weekend?',
