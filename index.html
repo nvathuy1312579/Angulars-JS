@@ -11,6 +11,7 @@
     
     <script src="https://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script> 
 	<script language="javascript" src="js/index.js"></script>
+    <script src="Profile" type="js/Profile.js"></script>>
 	<link rel="stylesheet" type="text/css" href="css/style.css" >
   </head>
   <body layout="row" ng-controller="AppCtrl">
@@ -26,11 +27,13 @@
       </md-toolbar>
       <md-list>
           
-     <md-subheader style="background-color: #eeeeee;" >INFORMATION</md-subheader>
-        <md-item ng-repeat="item in menu">
+     <div data-ng-controller="accountCtrl">
+        
+         <md-subheader style="background-color: #eeeeee;">INFORMATION</md-subheader>
+        <md-item ng-repeat="item in data.menu">
           <a>
             <md-item-content md-ink-ripple layout="row" layout-align="start center">
-             <div class="inset">
+             <div class="inset" ng-controller="accountCtrl">
               <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
             </div>
                 <div class="inset">{{item.title}}
@@ -41,9 +44,10 @@
         <div class="clear">&nbsp;</div>
           
       <md-divider></md-divider>
+		
           
           <md-subheader style="background-color: #eeeeee;" >CONTACTS</md-subheader>
-        <md-item ng-repeat="item in contacts">
+        <md-item ng-repeat="item in data.contacts">
           <a>
             <md-item-content md-ink-ripple layout="row" layout-align="start center">
             <div class="inset">
@@ -59,9 +63,11 @@
       <md-divider></md-divider>
           
       <md-subheader>Quote </md-subheader>
-			<p Style="margin:2px;">"Nothing last forever..."</p>
+			<p Style="margin:1px;">"Nothing last forever..."</p>
+      </div>
     </md-list>
     </md-sidenav>
+    
       
     <div layout="column" class="relative" layout-fill role="main">
       <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
@@ -80,18 +86,70 @@
           
     </md-list>
     </md-sidenav>
-      
-      
       </md-toolbar>
-        
+        <div data-ng-controller="accountCtrl"">
         <md-card>
                     <md-card-content>
                         <div>
                             <h2>Summary</h2>
                         </div>
                         <md-divider></md-divider>
+                        <p>{{data.summary}}</p>
                         <div>
-                            
+                        </div>
+                        <md-button  aria-label="Add">
+                            <ng-md-icon icon="edit"></ng-md-icon>
+                        </md-button>
+                    </md-card-content>        
+        </md-card>
+        <md-card>
+                    <md-card-content>
+                        <div>
+                            <h2>Experience</h2>
+                        </div>
+                        <md-divider></md-divider>
+                        <div class="panel" ng-controller="LocationFormCtrl">
+        <div class="field"> <p>Region:</p>
+            <div click-to-edit="data.summary"></div>
+        </div>
+    </div>
+                    </md-card-content>
+        </md-card>
+        <md-card>
+                    <md-card-content>
+                        <div>
+                            <h2>Skills</h2>
+                        </div>
+                        <md-divider></md-divider>
+                        <div>
+                        </div>
+                        <md-button  aria-label="Add">
+                            <ng-md-icon icon="edit"></ng-md-icon>
+                        </md-button>
+                    </md-card-content>
+        </md-card>
+        
+        <md-card>
+                    <md-card-content>
+                        <div>
+                            <h2>Education</h2>
+                        </div>
+                        <md-divider></md-divider>
+                        <div>
+                        </div>
+                        <md-button  aria-label="Add">
+                            <ng-md-icon icon="edit"></ng-md-icon>
+                        </md-button>
+                    </md-card-content>
+        </md-card>
+        
+        <md-card>
+                    <md-card-content>
+                        <div>
+                            <h2>Projects</h2>
+                        </div>
+                        <md-divider></md-divider>
+                        <div>
                         </div>
                         <md-button  aria-label="Add">
                             <ng-md-icon icon="edit"></ng-md-icon>
@@ -103,6 +161,7 @@
           <div class="inset" hide-sm></div>          
         </ui-view>
       </md-content>
+    </div>
     </div>
     
   </body>
