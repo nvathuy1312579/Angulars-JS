@@ -23,11 +23,9 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 body{
     font-family: 'Open Sans', sans-serif;
 }
-p,h1,h2{
-    text-align: center;
-}
+
 p{
-	font-size:25px;
+	font-size:20px;
     color:#67616b;
 	font-family: cambria;
 }
@@ -44,11 +42,13 @@ h1{
 	font-weight: bold;
     font-size:20px;
 	Color: white;
+   text-align: center;
 }
 h2{
+   text-align: center;
     font-family: sans-serif;
 	font-weight: bold;
-    font-size:20px;
+    font-size:30px !important;
 	Color: #33334d;
 }
 
@@ -60,7 +60,7 @@ h3{
 }
 
 h4{
-	font-size:25px;
+	font-size:20px;
     color:#33334d;
 	font-family: cambria;
 }
@@ -82,7 +82,7 @@ md-toolbar {
   }
 }
 h2 {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 .md-toolbar-tools-bottom {
   font-size: small;
@@ -105,6 +105,12 @@ md-sidenav {
   border-radius: 99%;
 }
 
+.experience{
+  font-size:25px;
+  color:#33334d;
+	font-family: cambria;
+}
+
 .profile{
     width: 90px;
     height: 100px;
@@ -113,4 +119,8 @@ md-sidenav {
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
     border-color: white;
+}
+
+.section{
+  display: inline-block !important;
 }

@@ -1,109 +1,280 @@
-<html lang="vi" ng-app="StarterApp">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
-	<!-- Angular Material Dependencies -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-aria.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script> 
-	<script language="javascript" src="js/index.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css" >
-  </head>
-  <body layout="row" ng-controller="AppCtrl">
-    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-      <md-toolbar class="md-tall md-hue-2">
-        <span flex></span>
-         <div layout="column" class="md-toolbar-tools-bottom inset" layout-align="center center">
-          <img ng-src="img/profile.jpg" class="profile" src="img/profile.JPG">
-          
-          <span></span>
-          <div style="font-size: 20; font-weight: 200">Thùy Nguyễn</div>
-        </div>
-      </md-toolbar>
-      <md-list>
-          
-     <md-subheader style="background-color: #eeeeee;" >INFORMATION</md-subheader>
-        <md-item ng-repeat="item in menu">
-          <a>
-            <md-item-content md-ink-ripple layout="row" layout-align="start center">
-             <div class="inset">
-              <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+
+<html lang="vi" ng-app="StarterApp">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+      <!-- Angular Material Dependencies -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-aria.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script> 
+      <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script language="javascript" src="js/index.js"></script>
+      <script src="Profile" type="js/Profile.js"></script>>
+      <link rel="stylesheet" type="text/css" href="css/style.css" >
+      <link rel="stylesheet" type="text/css" href="css/materialize.min.css" >
+   </head>
+   <body layout="row" ng-controller="AppCtrl">
+      <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+         <md-toolbar class="md-tall md-hue-2">
+            <span flex></span>
+            <div layout="column" class="md-toolbar-tools-bottom inset" layout-align="center center">
+               <img ng-src="img/profile.jpg" class="profile" src="img/profile.JPG">
+               <span></span>
+               <div style="font-size: 20; font-weight: 200">Thùy Nguyễn</div>
             </div>
-                <div class="inset">{{item.title}}
-              </div>
-            </md-item-content>
-          </a>
-        </md-item>
-        <div class="clear">&nbsp;</div>
-          
-      <md-divider></md-divider>
-          
-          <md-subheader style="background-color: #eeeeee;" >CONTACTS</md-subheader>
-        <md-item ng-repeat="item in contacts">
-          <a>
-            <md-item-content md-ink-ripple layout="row" layout-align="start center">
-            <div class="inset">
-              <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+         </md-toolbar>
+         <md-list>
+            <div data-ng-controller="accountCtrl">
+               <md-subheader style="background-color: #eeeeee;">INFORMATION</md-subheader>
+               <md-item ng-repeat="item in data.menu">
+                  <a>
+                     <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                        <div class="inset" ng-controller="accountCtrl">
+                           <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                        </div>
+                        <div class="inset">{{item.title}}
+                        </div>
+                     </md-item-content>
+                  </a>
+               </md-item>
+               <div class="clear">&nbsp;</div>
+               <md-divider></md-divider>
+               <md-subheader style="background-color: #eeeeee;" >CONTACTS</md-subheader>
+               <md-item ng-repeat="item in data.contacts">
+                  <a>
+                     <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                        <div class="inset">
+                           <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                        </div>
+                        <div class="inset">{{item.title }}
+                        </div>
+                     </md-item-content>
+                  </a>
+               </md-item>
+               <div class="clear">&nbsp;</div>
+               <md-divider></md-divider>
+               <md-subheader>Quote </md-subheader>
+               <p Style="margin:1px;">"Nothing last forever..."</p>
             </div>
-              <div class="inset">{{item.title }}
-              </div>
-            </md-item-content>
-          </a>
-        </md-item>
-        <div class="clear">&nbsp;</div>
-          
-      <md-divider></md-divider>
-          
-      <md-subheader>Quote </md-subheader>
-			<p Style="margin:2px;">"Nothing last forever..."</p>
-    </md-list>
-    </md-sidenav>
-      
-    <div layout="column" class="relative" layout-fill role="main">
-      <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
-        <ng-md-icon icon="add"></ng-md-icon>
-      </md-button>
-      <md-toolbar ng-show="!showSearch">
-        <div class="md-toolbar-tools">
-          <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
-            <ng-md-icon icon="menu"></ng-md-icon>
-          </md-button>
-          <h3>
-            Curriculum Vitae
-          </h3>
-          <span flex></span>
-        </div>
-          
-    </md-list>
-    </md-sidenav>
-      
-      
-      </md-toolbar>
+         </md-list>
+      </md-sidenav>
+      <div layout="column" class="relative" layout-fill role="main">
+         <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
+            <ng-md-icon icon="add"></ng-md-icon>
+         </md-button>
+         <md-toolbar ng-show="!showSearch">
+            <div class="md-toolbar-tools">
+               <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
+                  <ng-md-icon icon="menu"></ng-md-icon>
+               </md-button>
+               <h3>
+                  Curriculum Vitae
+               </h3>
+               <span flex></span>
+            </div>
+            </md-list>
+            </md-sidenav>
+         </md-toolbar>
+         <div data-ng-controller="accountCtrl"">
+            <md-card>
+               <md-card-content>
+                  <div>
+                     <h2>Summary</h2>
+                  </div>
+                  <md-divider></md-divider>
+                  <div class="panel" ng-controller="LocationFormCtrl">
+                     <div>
+                        <div click-to-edit="data.summary"></div>
+                     </div>
+                  </div>
+               </md-card-content>
+            </md-card>
+            <md-card>
+               <md-card-content>
+                  <div>
+                     <h2>Experiences</h2>
+                  </div>
+                  <md-divider></md-divider>
+                  <div>
+                     <md-item ng-repeat="item in data.experience" repeat-done="initModals()">
+                        <a>
+                           <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                              <div>
+                                 <ng-md-icon icon="{{item.logo}}"></ng-md-icon>
+                              </div>
+                              <div class="section">
+                                 <h5>{{item.company}}</h5>
+                                 <p1>{{item.position}}</P1>
+                                 <p>{{item.time}}</P>
+                              </div>
+                              <div class="edit" ng-show="exp[$index] == true">
+                                 <div class="row">
+                                    <div class="input-field col s6">
+                                       <input  ng-model="item.company" type="text" class="validate">
+                                       <label for="company">Company</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                       <input ng-model="item.position" type="text" class="validate">
+                                       <label for="position">Position</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                       <input ng-model="item.time" type="text" class="validate">
+                                       <label for="time">Time</label>
+                                    </div>
+                                 </div>
+                                 <md-button aria-label="cancel" ng-click="exp[$index] = false">
+                                    <ng-md-icon icon="cancel"></ng-md-icon>
+                                 </md-button>
+                              </div>
+                                <md-button aria-label="Add" ng-click="exp[$index] = true">
+                                 <ng-md-icon icon="edit"></ng-md-icon>
+                              </md-button>
+                           </md-item-content>
+                        </a>
+                     </md-item>
+                  </div>
+               </md-card-content>
+            </md-card>
+            <md-card>
+               <md-card-content>
+                  <div>
+                     <h2>Skills</h2>
+                  </div>
+                  <md-divider></md-divider>
+                  <md-item ng-repeat="item in data.skills" repeat-done="initModals()">
+                     <a>
+                        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                           <div class="section">
+                              <h5>{{item.level}}</h5>
+                              <p1>{{item.language}}</P1>
+                           </div>
+                          <div class="edit" ng-show="exp[$index] == true">
+                                 <div class="row">
+                                    <div class="input-field col s6">
+                                       <input  ng-model="item.language" type="text" >
+                                       <label for="company">Language</label>
+                                    </div>
+                                 </div>
+                                 <md-button aria-label="cancel" ng-click="exp[$index] = false">
+                                    <ng-md-icon icon="cancel"></ng-md-icon>
+                                 </md-button>
+                              </div>
+                              <md-button aria-label="Add" ng-click="exp[$index] = true">
+                                 <ng-md-icon icon="edit"></ng-md-icon>
+                              </md-button>
+                        </md-item-content>
+                     </a>
+                  </md-item>
+               </md-card-content>
+            </md-card>
+            <md-card>
+               <md-card-content>
+                  <div>
+                     <h2>Education</h2>
+                  </div>
+                  <md-divider></md-divider>
+                  <md-item ng-repeat="item in data.education" repeat-done="initModals()">
+                     <a>
+                        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                           <div class="section">
+                              <h5>{{item.school}}</h5>
+                              <p1>{{item.time}}</P1>
+                           </div>
+                          <div class="edit" ng-show="exp[$index] == true">
+                                 <div class="row">
+                                    <div class="input-field col s6">
+                                       <input ng-model="item.school" type="text" class="validate">
+                                       <label for="School">School</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                       <input ng-model="item.time" type="text" class="validate">
+                                       <label for="time">Time</label>
+                                    </div>
+                                 </div>
+                                 <md-button aria-label="cancel" ng-click="exp[$index] = false">
+                                    <ng-md-icon icon="cancel"></ng-md-icon>
+                                 </md-button>
+                              </div>
+                              <md-button aria-label="Add" ng-click="exp[$index] = true">
+                                 <ng-md-icon icon="edit"></ng-md-icon>
+                              </md-button>
+                        </md-item-content>
+                     </a>
+                  </md-item>
+               </md-card-content>
+            </md-card>
+            <md-card>
+               <md-card-content>
+               <div>
+                  <h2>Projects</h2>
+               </div>
+               <md-divider></md-divider>
+               <md-item ng-repeat="item in data.project" repeat-done="initModals()">
+                  <a>
+                     <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                        <div class="section">
+                           <img scr={{item.url}}/>
+                           <h5>{{item.title}}</h5>
+                           <p1>{{item.time}}</P1>
+                        </div>
+                        <div class="edit" ng-show="exp[$index] == true">
+                                 <div class="row">
+                                    <div class="input-field col s6">
+                                       <input ng-model="item.title" type="text" class="validate">
+                                       <label for="Title">Title</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                       <input ng-model="item.time" type="text" class="validate">
+                                       <label for="time">Time</label>
+                                    </div>
+                                 </div>
+                                 <md-button aria-label="cancel" ng-click="exp[$index] = false">
+                                    <ng-md-icon icon="cancel"></ng-md-icon>
+                                 </md-button>
+                              </div>
+                              <md-button aria-label="Add" ng-click="exp[$index] = true">
+                                 <ng-md-icon icon="edit"></ng-md-icon>
+                              </md-button>
+                     </md-item-content>
+                  </a>
+               </md-item>
+            </md-card>
+           
+            <md-content flex md-scroll-y>
+               <ui-view layout="column" layout-fill layout-padding>
+                  <div class="inset" hide-sm></div>
+               </ui-view>
+            </md-content>
+         </div>
+      </div>
         
-        <md-card>
-                    <md-card-content>
-                        <div>
-                            <h2>Summary</h2>
-                        </div>
-                        <md-divider></md-divider>
-                        <div>
-                            
-                        </div>
-                        <md-button  aria-label="Add">
-                            <ng-md-icon icon="edit"></ng-md-icon>
-                        </md-button>
-                    </md-card-content>
-        </md-card>
-      <md-content flex md-scroll-y>
-        <ui-view layout="column" layout-fill layout-padding>
-          <div class="inset" hide-sm></div>          
-        </ui-view>
-      </md-content>
-    </div>
-    
-  </body>
+      <!--modals
+      <div id="expmodal" class="modal modal-fixed-footer">
+         <div class="modal-content">
+            <h4>Edit Experience</h4>
+            <div class="row">
+               <form class="col s12">
+                  <div class="row">
+                     <div class="input-field col s6">
+                        <input placeholder="company" id="company" type="text" class="validate" ng-model="exp_company">
+                        <label for="company">Company</label>
+                     </div>
+                     <div class="input-field col s6">
+                        <input id="position" type="text" class="validate" ng-model="exp_position">
+                        <label for="position">Position</label>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat " ng-click="update_exp()">Agree</a>
+         </div>
+      </div>-->
+   </body>
 </html>
+

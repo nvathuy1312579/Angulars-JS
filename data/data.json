@@ -1,0 +1,194 @@
+
+
+{
+
+   "menu": [
+
+      {
+
+         "link": "",
+
+         "title": "Full Name: Nguyen Vu Anh Thuy",
+
+         "icon": "description"
+
+      },
+
+      {
+
+         "link": "",
+
+         "title": "D.O.B: 23/09/1995",
+
+         "icon": "event"
+
+      },
+
+      {
+
+         "link": "",
+
+         "title": "National: VietNamese",
+
+         "icon": "language"
+
+      },
+
+      {
+
+         "link": "",
+
+         "title": "Student at Information Technology in University of Sciences",
+
+         "icon": "account_circle"
+
+      },
+
+      {
+
+         "link": "",
+
+         "title": "P.O.B: Kien Giang",
+
+         "icon": "home"
+
+      }
+
+   ],
+
+   "contacts": [
+
+      {
+
+         "link": "anhthuy2908@gmal.com",
+
+         "title": "Email: anhthuy2908@gmail.com",
+
+         "icon": "mail"
+
+      },
+
+      {
+
+         "link": "",
+
+         "title": "Phone Number: 01692189779",
+
+         "icon": "phone"
+
+      }
+
+   ],
+
+   "project": [
+
+      {
+
+         "title": "Computer Architec ture and Assembly Language",
+
+         "time": "2013-2014",
+
+         "url": "img/setup.png"
+
+      },
+
+      {
+
+         "title": "Data structures and Algorithms",
+
+         "time": "2014-2015",
+
+         "url": "img/sign.png"
+
+      }
+
+   ],
+
+   "experience": [
+
+      {
+
+         "company": "Global Cyber Soft",
+
+         "position": "internship",
+
+         "time": "6 months",
+
+         "logo": ""
+
+      },
+
+      {
+
+         "company": "Company",
+
+         "position": "internship",
+
+         "time": "6 months",
+
+         "logo": ""
+
+      }
+
+   ],
+
+   "education": [
+
+      {
+
+         "school": "Tan Hiep High School",
+
+         "time": "2009-2013"
+
+      },
+
+      {
+
+         "school": "University of Sciences",
+
+         "time": "2009-2013"
+
+      }
+
+   ],
+
+   "skills": [
+
+      {
+
+         "language": "SQL, javaS cript",
+
+         "level": "Basic"
+
+      },
+
+      {
+
+         "language": "C, C#, HTML/CSS",
+
+         "level": "Intermediate"
+
+      },
+
+      {
+
+         "language": "C++",
+
+         "level": "Advanced"
+
+      },
+
+      {
+
+         "language": "Adobe photoshop, MS.Office",
+
+         "level": "Additional software"
+
+      }
+
+   ],
+
+   "summary": "I'm a junior student at University of Sciences - Information Technology "
+
+}
+
